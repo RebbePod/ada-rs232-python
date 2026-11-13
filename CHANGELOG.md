@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0
+
+- Publish the expanded PAC command support as a regular release. Runtime
+  behavior is unchanged from 0.2.0b1; new command paths still require hardware
+  verification.
+
 ## 0.2.0b1
 
 - Add a shared `AdaBus`, addressed client views, GA queries, atomic masks, and

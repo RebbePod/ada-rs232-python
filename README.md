@@ -8,7 +8,7 @@ connections.
 The PTM-1645 protocol and hardware connection were tested by the maintainer using
 an ESPHome RS-232 proxy. Version 0.1.0 is the dependency for the prepared
 Home Assistant Core change.
-The 0.2.0 beta adds the remaining documented commands; those additions require
+Version 0.2.0 adds the remaining documented commands; those additions require
 hardware verification.
 
 ## Usage

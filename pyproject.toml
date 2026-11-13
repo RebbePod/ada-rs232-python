@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ada-rs232"
-version = "0.2.0b1"
+version = "0.2.0"
 description = "Async RS-232 control for Audio Design Associates PAC amplifiers"
 readme = "README.md"
 requires-python = ">=3.12"
