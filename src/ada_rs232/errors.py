@@ -7,3 +7,7 @@ class AdaError(Exception):
 
 class AdaConnectionError(AdaError):
     """A connection, write, or amplifier response failed."""
+
+
+class AdaSetupError(AdaError):
+    """Setup mode is required, active, or returned unconfirmed settings."""

@@ -159,7 +159,7 @@ async def test_cancelled_query_releases_reader(connection) -> None:
     with pytest.raises(asyncio.CancelledError):
         await task
     assert stream.closed
-    assert client._reader_task is None
+    assert client.bus._reader_task is None
 
 
 async def test_write_error_invalidates_state(connection) -> None:

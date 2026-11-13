@@ -1,6 +1,17 @@
 """Async control of Audio Design Associates PAC amplifiers."""
 
-from .client import AdaClient, StateCallback, ZoneState
-from .errors import AdaConnectionError, AdaError
+from .client import AdaBus, AdaClient, BusCallback, StateCallback
+from .errors import AdaConnectionError, AdaError, AdaSetupError
+from .setup import SetupState, ZoneState
 
-__all__ = ["AdaClient", "AdaConnectionError", "AdaError", "StateCallback", "ZoneState"]
+__all__ = [
+    "AdaBus",
+    "AdaClient",
+    "AdaConnectionError",
+    "AdaError",
+    "AdaSetupError",
+    "BusCallback",
+    "SetupState",
+    "StateCallback",
+    "ZoneState",
+]
