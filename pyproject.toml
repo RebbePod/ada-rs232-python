@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ada-rs232"
+version = "0.1.0"
+description = "Async RS-232 control for Audio Design Associates PAC amplifiers"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "RebbePod" }]
+dependencies = ["serialx>=1.15.1,<2"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Framework :: AsyncIO",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Home Automation",
+]
+
+[project.urls]
+Homepage = "https://github.com/RebbePod/ada-rs232-python"
+Repository = "https://github.com/RebbePod/ada-rs232-python"
+Issues = "https://github.com/RebbePod/ada-rs232-python/issues"
+Changelog = "https://github.com/RebbePod/ada-rs232-python/blob/main/CHANGELOG.md"
+
+[dependency-groups]
+dev = [
+  "mypy>=1.19",
+  "pytest>=9",
+  "pytest-asyncio>=1.4",
+  "pytest-cov>=7",
+  "ruff==0.17.3",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["src"]
